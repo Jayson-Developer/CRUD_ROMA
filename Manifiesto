@@ -1,0 +1,168 @@
+<?php include('../Templates/cabecera.php'); ?>
+
+
+ <?php include('../Secciones/prueba.php'); ?> 
+
+
+<div class="col-md-12">
+<form action="" method="post">
+
+<div class="card">
+  <div class="card-header">
+    Manifiesto de Despacho
+  </div>
+  <div class="card-body">
+  <!-- Formulario -->
+
+  <div class="col-md-4">
+  <label for="" class="form-label">ID</label>
+  <input type="text"
+    class="form-control" 
+    name="id" 
+    id="id" 
+    aria-describedby="helpId" placeholder="ID">
+  </div>
+
+<div class="col-md-4">
+  <label for="" class="form-label">Correlativo</label>
+  <input type="text"
+    class="form-control" 
+    name="Correlativo" 
+    id="correlativo" 
+    aria-describedby="helpId" placeholder="Correlativo">
+  </div>
+
+  <div class="row">
+  <div class="form-group col">
+  <label for="" class="form-label">Fecha</label>
+  <input type="date" 
+  class="form-control" 
+  name="fecha"
+  id="Fecha">
+  </div>
+  </div>
+
+  <div class="mb-3">
+  <label for="" class="form-label">Destino</label>
+  <input type="text" 
+  class="form-control" 
+  name="Destino"
+  id="destino">
+  </div>
+
+  <div class="mb-3">
+  <label for="" class="form-label">Agente</label>
+  <input type="text" 
+  class="form-control" 
+  name="Agente"
+  id="agente">
+  </div>
+
+  <div class="mb-3">
+  <label for="" class="form-label">Orden</label>
+  <input type="text" 
+  class="form-control" 
+  name="Orden"
+  id="orden">
+  </div>
+
+  <div class="mb-3">
+  <label for="" class="form-label">Cliente</label>
+  <input type="text" 
+  class="form-control" 
+  name="Cliente"
+  id="cliente">
+  </div>
+
+  <div class="mb-3">
+  <label for="" class="form-label">Cantidad</label>
+  <input type="text" 
+  class="form-control" 
+  name="Cantidad"
+  id="cantidad">
+  </div>
+
+  <div class="mb-3">
+  <label for="" class="form-label">Descripcion</label>
+  <input type="text" 
+  class="form-control" 
+  name="Descripcion"
+  id="descripcion">
+  </div>
+
+  <div class="mb-3">
+  <label for="" class="form-label">Peso</label>
+  <input type="text" 
+  class="form-control" 
+  name="Peso"
+  id="peso">
+  </div>
+
+  <div class="mb-3">
+  <label for="" class="form-label">Tipo Envio</label>
+  <input type="text" 
+  class="form-control" 
+  name="Tipo_Envio"
+  id="tipo_envio">
+  </div>
+
+  <div class="btn-group" role="group" aria-label="">
+    <button type="submit" name = "accion" value = "Agregar" class="btn btn-primary">Agregar</button>
+    <button type="submit" name = "accion" value = "Editar" class="btn btn-primary">Editar</button>
+    <button type="submit" name = "accion" value = "Eliminar" class="btn btn-primary">Eliminar</button>
+  </div>
+ 
+</div>
+
+
+</div>
+
+</form>
+
+<div class="col-md-7">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>correlativo</th>
+      <th>fecha</th>
+      <th>destino</th>
+      <th>agente</th>
+      <th>orden</th>
+      <th>cliente</th>
+      <th>cantidad</th>
+      <th>descripcion</th>
+      <th>peso</th>
+      <th>tipo_envio</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+  <?php foreach($listamanifiestos as $mani){?>
+    <tr>
+      <td> <?php echo $mani ['id'];?></td>
+      <td> <?php echo $mani ['correlativo'];?></td>
+      <td> <?php echo $mani ['fecha'];?></td>
+      <td> <?php echo $mani ['destino'];?></td>
+      <td> <?php echo $mani ['agente'];?></td>
+      <td> <?php echo $mani ['orden'];?></td>
+      <td> <?php echo $mani ['cliente'];?></td>
+      <td> <?php echo $mani ['cantidad'];?></td>
+      <td> <?php echo $mani ['descripcion'];?></td>
+      <td> <?php echo $mani ['peso'];?></td>
+      <td> <?php echo $mani ['tipo_envio'];?></td>
+
+    </tr>
+ <?php }?>
+  </tbody>
+</table>
+
+
+</div>
+
+
+
+
+<?php include('../Templates/pie.php'); ?>
